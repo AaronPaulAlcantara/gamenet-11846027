@@ -6,6 +6,7 @@ using Photon.Pun;
 public class PlayerSetUp : MonoBehaviourPunCallbacks
 {
     public Camera cam;
+    public GameObject DrUiPrefab;
     // Start is called before the first frame update
     void Start()
     {     
@@ -18,8 +19,13 @@ public class PlayerSetUp : MonoBehaviourPunCallbacks
         else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue("dr"))
         {
             GetComponent<VehicleMovement>().enabled = photonView.IsMine;
-            GetComponent<LapController>().enabled = photonView.IsMine;
+            GetComponent<VehicleShooting>().enabled = photonView.IsMine;
             cam.enabled = photonView.IsMine;
+
+            if (photonView.IsMine)
+            {
+                GameObject playerUi = Instantiate(DrUiPrefab);
+            }
         }
     }
 }

@@ -8,11 +8,11 @@ public class VehicleMovement : MonoBehaviour
     public float rotationSpeed = 200;
     public float currentSpeed = 0;
 
-    public bool isControlEnabled;
+    public bool isControlEnabled = false;
 
     private void Start()
     {
-        isControlEnabled = false;
+        
     }
 
     private void LateUpdate()

@@ -226,6 +226,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
             ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable() { { "gm", GameMode } };
 
+            if(GameMode == "dr")
+            {
+                roomOptions.MaxPlayers = 3;
+            }
+            else if (GameMode == "rc")
+            {
+                roomOptions.MaxPlayers = 10;
+            }
+
             roomOptions.CustomRoomPropertiesForLobby = roomPropertiesInLobby;
             roomOptions.CustomRoomProperties = customRoomProperties;
 

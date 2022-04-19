@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 7044694706882824043}
+  DrUiPrefab: {fileID: 3336305832422869015, guid: 00a51a3f6574c3f4a9f962c13f1bf317, type: 3}
 --- !u!1 &7253648738071737429
 GameObject:
   m_ObjectHideFlags: 0
