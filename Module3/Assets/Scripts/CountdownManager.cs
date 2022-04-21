@@ -41,6 +41,7 @@ public class CountdownManager : MonoBehaviourPunCallbacks
         }
 
     }
+
     [PunRPC]
     public void StartRace()
     {
